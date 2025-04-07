@@ -28,10 +28,11 @@ export class BookService {
     }
   }
 
-  removeBook(title: string) {
-    const index = this.books.findIndex(book => book.title === title);
+  removeBook(book: Book): Book[] {
+    const index = this.books.findIndex(b => b === book);
     if (index) {
       this.books.splice(index, 1);
     }
+    return this.books;
   }
 }

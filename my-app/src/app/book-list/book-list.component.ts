@@ -19,4 +19,7 @@ export class BookListComponent implements OnInit {
     this.books = this.bookSvc.getBooks(); 
   }
 
+  delete(book: Book) {
+    this.books = this.bookSvc.removeBook(book);
+  }
 }

@@ -3,6 +3,7 @@
     <ul>
         <li *ngFor="let book of books">
             {{ book.title }} by {{ book.author }}
+            <i class="fa-regular fa-trash-can" (click)="delete(book)"></i>
         </li>
     </ul>
 </div>
