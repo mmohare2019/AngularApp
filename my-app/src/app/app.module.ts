@@ -13,7 +13,7 @@ import { BookService } from './services/book.service';
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
     ],
     providers: [
         BookService
