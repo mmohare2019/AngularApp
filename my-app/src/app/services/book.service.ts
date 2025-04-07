@@ -20,4 +20,18 @@ export class BookService {
   getBook(title: string) {
     return this.books.find(book => book.title === title);
   }
+
+  addBook(book: Book) {
+    const found = this.books.find(b => b === book); 
+    if (!found) {
+      this.books.push(book);
+    }
+  }
+
+  removeBook(title: string) {
+    const index = this.books.findIndex(book => book.title === title);
+    if (index) {
+      this.books.splice(index, 1);
+    }
+  }
 }

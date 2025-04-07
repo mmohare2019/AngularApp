@@ -18,4 +18,5 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this.books = this.bookSvc.getBooks(); 
   }
+
 }
