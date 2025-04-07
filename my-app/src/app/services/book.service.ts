@@ -16,4 +16,8 @@ export class BookService {
   getBooks() {
     return this.books;
   }
+
+  getBook(title: string) {
+    return this.books.find(book => book.title === title);
+  }
 }

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './heroes.component.less'
 })
 export class HeroesComponent {
-  hero = 'me';
+  hero = 'HERO';
 }
