@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
-import { BookListComponent } from './book-list/book-list.component';
+import { RouterOutlet, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroesComponent, BookListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less'
 })
 export class AppComponent {
   title = 'Personal Library';
+
+  constructor(private router: Router) {}
+
+  seeList() {
+    this.router.navigate(['/books']);
+  }
 }
